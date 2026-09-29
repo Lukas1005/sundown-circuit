@@ -564,7 +564,6 @@ window.addEventListener('unhandledrejection', function (e) { window.__reportErro
   if (!Array.isArray(SAVE.owned) || !SAVE.owned.includes('runner')) SAVE.owned = ['runner'];
   if (!SAVE.up || typeof SAVE.up !== 'object') SAVE.up = {};
   function save() { try { localStorage.setItem('sundown-circuit-save', JSON.stringify(SAVE)); } catch (e) {} }
-  if (SAVE.grant !== 3) { SAVE.wallet += 10000; SAVE.grant = 3; save(); }   // one-time test money
   let curMap = Math.max(0, MAPS.findIndex(m => m.id === SAVE.map));
   let curCar = Math.max(0, CARS.findIndex(c => c.id === SAVE.car && SAVE.owned.includes(c.id)));
 
