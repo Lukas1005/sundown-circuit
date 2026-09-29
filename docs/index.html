@@ -1,4 +1,4 @@
-<title>Sundown Circuit</title>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#150a12"><style>html,body{height:100%;margin:0}[hidden]{display:none!important}</style></head><body><title>Sundown Circuit</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -564,7 +564,6 @@ window.addEventListener('unhandledrejection', function (e) { window.__reportErro
   if (!Array.isArray(SAVE.owned) || !SAVE.owned.includes('runner')) SAVE.owned = ['runner'];
   if (!SAVE.up || typeof SAVE.up !== 'object') SAVE.up = {};
   function save() { try { localStorage.setItem('sundown-circuit-save', JSON.stringify(SAVE)); } catch (e) {} }
-  if (SAVE.grant !== 3) { SAVE.wallet += 10000; SAVE.grant = 3; save(); }   // one-time test money
   let curMap = Math.max(0, MAPS.findIndex(m => m.id === SAVE.map));
   let curCar = Math.max(0, CARS.findIndex(c => c.id === SAVE.car && SAVE.owned.includes(c.id)));
 
@@ -3017,3 +3016,4 @@ window.addEventListener('unhandledrejection', function (e) { window.__reportErro
   requestAnimationFrame(frame);
 })();
 </script>
+</body></html>
